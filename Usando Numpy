@@ -13,7 +13,7 @@ for i in range(n):
         a[i][j] = float(input( 'a['+str(i)+']['+ str(j)+']='))
 print("Ax: \n",a)
 
-#Captrua y muestra de términos independientes
+#Captura y muestra de términos independientes
 print('Ingresar los Coeficientes de los términos independientes:')
 for i in range(n):
     b[i] = float(input( 'b['+str(i)+']='))
