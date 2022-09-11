@@ -1,0 +1,28 @@
+import numpy as np
+
+#Parámetros iniciales
+n = int(input('Ingresar el número de incógnitas: '))
+a = np.zeros((n,n))
+b = np.zeros(n)
+x = np.zeros(n)
+
+#Captura y muestra de coeficientes de las ecuaciones
+print('Ingresar los Coeficientes de las Ecuaciones:')
+for i in range(n):
+    for j in range(n):
+        a[i][j] = float(input( 'a['+str(i)+']['+ str(j)+']='))
+print("Ax: \n",a)
+
+#Captrua y muestra de términos independientes
+print('Ingresar los Coeficientes de los términos independientes:')
+for i in range(n):
+    b[i] = float(input( 'b['+str(i)+']='))
+print("b: \n",b)
+
+#Solución con librería
+x = np.linalg.solve(a, b)
+print(x)
+
+#Muestra de resultados
+for i in range(n):
+    print("Valor de X"+str(i)+": \n", x[i])
